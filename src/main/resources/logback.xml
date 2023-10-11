@@ -1,0 +1,38 @@
+<configuration>
+<!--
+   Loggers may be assigned levels. The set of possible levels (OFF, TRACE, DEBUG, INFO, WARN and ERROR)
+   spperner refs can be STDOUT or FILE
+-->
+<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+
+    <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>src/logs/schemagenerator.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} TKD [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger level="debug" name="slick.jdbc.JdbcBackend" >
+        <appender-ref ref="STDOUT" />
+    </logger>
+
+    <!--logger level="debug" name="com.schemagenerator.engine.DataMigration" >
+        <appender-ref ref="STDOUT" />
+    </logger-->
+
+  <logger level="debug" name="com.schemagenerator.engine.SchemaGenerator" >
+        <appender-ref ref="STDOUT" />
+    </logger>
+
+  <logger level="debug" name="PostgresSchemaTest" >
+        <appender-ref ref="STDOUT" />
+    </logger>
+
+
+</configuration>

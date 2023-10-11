@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<mappings schema="public" >
+    <mapping table="CHECKPOINT" schema="public"></mapping>
+    <mapping table="EDGE" schema="public"></mapping>
+    <mapping table="EDGE_REV" schema="public"></mapping>
+    <mapping table="EDGE_TYPE" schema="public"></mapping>
+    <mapping table="NODE" schema="public"></mapping>
+    <mapping table="NODE_REV" schema="public"></mapping>
+    <mapping table="NODE_TYPE" schema="public"></mapping>
+</mappings>

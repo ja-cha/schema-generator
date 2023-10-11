@@ -1,0 +1,1 @@
+Generates Scala Slick mapping files from Postgres database Schema
